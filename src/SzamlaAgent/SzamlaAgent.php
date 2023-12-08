@@ -46,27 +46,27 @@ class SzamlaAgent {
     /**
      * Alapértelmezett tanúsítvány fájlnév
      */
-    const CERTIFICATION_FILENAME = 'cacert.pem';
+    const CERTIFICATION_FILENAME = '';
 
     /**
      * Tanúsítványok útvonala
      */
-    const CERTIFICATION_PATH = './cert';
+    const CERTIFICATION_PATH = '';
 
     /**
      * PDF dokumentumok útvonala
      */
-    const PDF_FILE_SAVE_PATH = './pdf';
+    const PDF_FILE_SAVE_PATH = 'pdf';
 
     /**
      * XML fájlok útvonala
      */
-    const XML_FILE_SAVE_PATH = './xmls';
+    const XML_FILE_SAVE_PATH = 'xmls';
 
     /**
      * Fájl mellékletek útvonala
      */
-    const ATTACHMENTS_SAVE_PATH = './attachments';
+    const ATTACHMENTS_SAVE_PATH = 'attachments';
 
     /**
      * Naplózási szint
@@ -78,7 +78,7 @@ class SzamlaAgent {
      *
      * @var int
      */
-    private $logLevel;
+    private $logLevel = Log::LOG_LEVEL_WARN;
 
     /**
      * Naplózási e-mail cím

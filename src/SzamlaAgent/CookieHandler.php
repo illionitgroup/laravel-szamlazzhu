@@ -331,7 +331,7 @@ class CookieHandler {
         if (SzamlaAgentUtil::isBlank($fileName)) {
             $fileName = CookieHandler::COOKIE_FILENAME;
         }
-        return SzamlaAgentUtil::getBasePath() . DIRECTORY_SEPARATOR . $fileName;
+        return SzamlaAgentUtil::getBasePath() . DIRECTORY_SEPARATOR . 'cookies' . DIRECTORY_SEPARATOR . $fileName;
     }
 
     /**
