@@ -25,7 +25,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "IllionItGroup\\SzamlazzHu\\Tests\\": "test/",
+      "IllionItGroup\\SzamlazzHu\\Tests\\": "test/"
     }
   },
   "suggest": {
