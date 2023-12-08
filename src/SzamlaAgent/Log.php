@@ -17,7 +17,7 @@ class Log {
     /**
      * Naplók útvonala
      */
-    const LOG_PATH = './logs';
+    const LOG_PATH = '';
 
     /**
      * Naplózási szint: nincs naplózás
@@ -135,11 +135,11 @@ class Log {
         $logType = SzamlaAgentUtil::isNotBlank($log->getLogTypeStr($pType)) ? ' ['.$log->getLogTypeStr($pType).'] ' : '';
         $message    = '['.date('Y-m-d H:i:s').'] ['.$remoteAddr.']'. $logType . $pMessage.PHP_EOL;
 
-        error_log($message, 3, $filename);
+        @error_log($message, 3, $filename);
 
         if (!empty($pEmail) && $pType == self::LOG_LEVEL_ERROR) {
             $headers = "Content-Type: text/html; charset=UTF-8";
-            error_log($message, 1, $pEmail, $headers);
+            @error_log($message, 1, $pEmail, $headers);
         }
     }
 
