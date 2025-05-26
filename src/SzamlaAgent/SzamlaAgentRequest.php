@@ -561,7 +561,7 @@ class SzamlaAgentRequest {
                 throw new SzamlaAgentException($error);
             } else {
                 $keys = implode(",", array_keys($headers));
-                if ($response['headers']['Content-Type'] == 'application/pdf' || (!preg_match('/(szlahu_)/', $keys, $matches))) {
+                if (!empty($response['headers']['Content-Type']) && $response['headers']['Content-Type'] == 'application/pdf' || (!preg_match('/(szlahu_)/', $keys, $matches))) {
                     $msg = $response['headers'];
                 } else {
                     $msg = $response;
